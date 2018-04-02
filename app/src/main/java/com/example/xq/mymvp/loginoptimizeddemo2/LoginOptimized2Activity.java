@@ -45,10 +45,14 @@ public class LoginOptimized2Activity extends MVPBaseActivity<IUserLoginView, Log
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.btn_login_clear:
-                mPresenter.clear();
+                if (mPresenter != null) {
+                    mPresenter.clear();
+                }
                 break;
             case R.id.btn_login_login:
-                mPresenter.login(editUser.getText().toString(), editPass.getText().toString());
+                if (mPresenter != null) {
+                    mPresenter.login(editUser.getText().toString(), editPass.getText().toString());
+                }
                 break;
         }
     }
