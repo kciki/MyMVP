@@ -19,6 +19,7 @@
         <activity android:name=".logindemo.LoginActivity"></activity>
         <activity android:name=".loginoptimizeddemo1.LoginOptimized1Activity"></activity>
         <activity android:name=".loginoptimizeddemo2.LoginOptimized2Activity"></activity>
+        <activity android:name=".loginmvpdagger2.LoginMVPDagger2Activity" />
     </application>
 
 </manifest>

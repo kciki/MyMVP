@@ -28,6 +28,12 @@
             android:layout_height="wrap_content"
             android:text="MVP: Login Optimized2"
             android:onClick="loginOptimized2"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="MVP: Login MVP Dagger2"
+            android:onClick="loginMvpDagger2"/>
     </LinearLayout>
 
 </RelativeLayout>

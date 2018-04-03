@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 
 import com.example.xq.mymvp.logindemo.LoginActivity;
+import com.example.xq.mymvp.loginmvpdagger2.LoginMVPDagger2Activity;
 import com.example.xq.mymvp.loginoptimizeddemo1.LoginOptimized1Activity;
 import com.example.xq.mymvp.loginoptimizeddemo2.LoginOptimized2Activity;
 
@@ -28,5 +29,9 @@ public class MainActivity extends AppCompatActivity {
 
     public void loginOptimized2(View view) {
         startActivity(new Intent(MainActivity.this, LoginOptimized2Activity.class));
+    }
+
+    public void loginMvpDagger2(View view) {
+        startActivity(new Intent(MainActivity.this, LoginMVPDagger2Activity.class));
     }
 }

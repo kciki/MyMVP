@@ -1,14 +1,15 @@
-package com.example.xq.mymvp.loginoptimizeddemo2.model.biz;
+package com.example.xq.mymvp.loginmvpdagger2.moudle.biz;
 
-import com.example.xq.mymvp.loginoptimizeddemo2.model.bean.User;
+
+import com.example.xq.mymvp.loginmvpdagger2.moudle.bean.User;
 
 /**
- * Created by xq on 2018/4/2.
+ * Created by xq on 2018/4/3.
  */
 
-public class UserBiz implements IUserBiz {
+public class UserBizCompl implements IUserBiz {
     @Override
-    public void login(final String name, final String pwd, final OnLoginListener onLoginListener) {
+    public void login(final String name, final String pwd, final OnLoginListener listener) {
         //子线程耗时操作
         new Thread() {
             @Override
@@ -21,9 +22,9 @@ public class UserBiz implements IUserBiz {
                 //登录成功
                 if ("admin".equals(name) && "admin".equals(pwd)) {
                     User user = new User(name,pwd);
-                    onLoginListener.loginSuccess(user);
+                    listener.loginSuccess(user);
                 } else {
-                    onLoginListener.loginFailed();
+                    listener.loginError();
                 }
             }
         }.start();
